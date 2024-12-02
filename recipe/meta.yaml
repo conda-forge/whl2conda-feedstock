@@ -6,7 +6,7 @@ package:
   version: {{ version }}
 
 source:
-  url: https://pypi.io/packages/source/w/whl2conda/whl2conda-{{ version }}.tar.gz
+  url: https://pypi.org/packages/source/w/whl2conda/whl2conda-{{ version }}.tar.gz
   sha256: f2d6a634015cd910f45afb4982e5938d4ba1d7c0e8cb56f1e15271743b09808c
 
 build:
@@ -14,15 +14,15 @@ build:
     - whl2conda = whl2conda.cli:main
   noarch: python
   script: {{ PYTHON }} -m pip install . -vv
-  number: 0
+  number: 1
 
 requirements:
   host:
-    - python >=3.8
+    - python {{ python_min }}
     - hatchling
     - pip
   run:
-    - python >=3.8
+    - python >={{ python_min }}
     - conda-package-handling >=2.2
     - platformdirs >=3.10
     - pyyaml >=6.0
@@ -38,6 +38,7 @@ test:
   requires:
     - pip
     - requests
+    - python {{ python_min }}
 
 about:
   summary: build conda packages directly from pure python wheels
