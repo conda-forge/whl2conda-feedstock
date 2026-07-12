@@ -24,6 +24,7 @@ requirements:
   run:
     - python >={{ python_min }}
     - conda-package-handling >=2.2
+    - packaging >=23
     - platformdirs >=3.10
     - pyyaml >=6.0
     - tomlkit >=0.12
