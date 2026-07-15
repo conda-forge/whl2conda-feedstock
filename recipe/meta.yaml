@@ -1,5 +1,5 @@
 {% set name = "whl2conda" %}
-{% set version = "26.7.1" %}
+{% set version = "26.7.2" %}
 
 package:
   name: whl2conda
@@ -7,7 +7,7 @@ package:
 
 source:
   url: https://pypi.org/packages/source/w/whl2conda/whl2conda-{{ version }}.tar.gz
-  sha256: 044e295abdd89296e912075b88946f58cae5211f15ec7233f914701aa6d27a9b
+  sha256: 8d12f53a80d8626bf57e1159b1e8746401f4999ac46cfedcfec74091ab2268b0
 
 build:
   entry_points:
